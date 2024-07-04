@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Running Text Video</title>
+</head>
+<body>
+    <h1>Generate Running Text Video</h1>
+    <form action="{% url 'generate_video' %}" method="post">
+        {% csrf_token %}
+        <label for="text">Text:</label>
+        <input type="text" id="text" name="text" value="Hello, World!" required><br><br>
+        <label for="filename">Filename:</label>
+        <input type="text" id="filename" name="filename" value="running_text.mp4" required><br><br>
+        <button type="submit">Generate and Download</button>
+    </form>
+</body>
+</html>
