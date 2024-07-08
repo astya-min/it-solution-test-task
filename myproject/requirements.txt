@@ -10,8 +10,7 @@ psycopg2-binary==2.9.3
 # Django REST Framework
 djangorestframework==3.14.0
 
-# Библиотека для работы с изображениями
-Pillow==9.1.0
+
 
 # Управление конфигурацией через переменные окружения
 django-environ==0.9.0
