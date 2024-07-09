@@ -7,6 +7,7 @@ import imageio
 import os
 from .models import GeneratedVideo
 import numpy
+from django.views.decorators.csrf import csrf_exempt
 
 
 def index(request):
@@ -47,7 +48,7 @@ def save_video(frames, output_filename="running_text.mp4", fps=120):
         writer.append_data(numpy_frame)
     writer.close()
 
-
+@csrf_exempt
 def generate_video(request):
     if request.method == 'POST':
         text = request.POST.get('text', 'Hello, World!')
