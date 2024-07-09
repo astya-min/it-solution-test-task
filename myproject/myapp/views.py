@@ -48,7 +48,6 @@ def save_video(frames, output_filename="running_text.mp4", fps=120):
     writer.close()
 
 
-@csrf_exempt
 def generate_video(request):
     if request.method == 'POST':
         text = request.POST.get('text', 'Hello, World!')
