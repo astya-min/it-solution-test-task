@@ -8,7 +8,7 @@
 <body>
     <h1>Generate Running Text Video</h1>
     <form action="{% url 'generate_video' %}" method="post">
-        
+        {% csrf_token %}
         <label for="text">Text:</label>
         <input type="text" id="text" name="text" value="Hello, World!" required><br><br>
         <label for="filename">Filename:</label>
