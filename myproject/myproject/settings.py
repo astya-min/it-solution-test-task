@@ -117,7 +117,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-CSRF_TRUSTED_ORIGINS = ['https://*', 'http://*']
+
    
 
 
