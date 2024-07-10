@@ -57,7 +57,11 @@ def generate_video(request):
         duration = 3
         fps = 120
         total_frames = duration * fps
-        font = ImageFont.truetype("DejaVuSans.ttf", 16)
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        # Создаем абсолютный путь к файлу шрифта
+        font_path = os.path.join(script_dir, 'DejaVuSans.ttf')
+        # Загружаем шрифт
+        font = ImageFont.truetype(font_path, 16)
         frames = generate_frames(text, width, height, font, total_frames)
         save_video(frames, filename, fps)
 
