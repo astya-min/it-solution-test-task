@@ -25,7 +25,7 @@ def resize_image(image, width, height):
 def create_image(text, width, height, font, x_position, y_position):
     image = Image.new('RGB', (width, height), color='black')
     draw = ImageDraw.Draw(image)
-    draw.text((x_position, y_position), text, font=font, fill='white')
+    draw.text((x_position, y_position), text.encode('utf-8'), font=font, fill='white')
     return image
 
 
